@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LOCAL FONT FILE IMPORT
+	WARNING: in order to avoid conflicts with the computer-installed fonts,
+	you should use a different font family name than the original one.
+	Also see tailwind.config.js for the font-family definition.
+*/
+
+@layer base {
+	@font-face {
+		font-family: "Google Xans";
+		font-weight: 400;
+		src: url('/fonts/GoogleSans-Regular.woff2') format("woff2");
+	}
+	@font-face {
+		font-family: "Google Xans";
+		font-weight: 500;
+		src: url('/fonts/GoogleSans-Bold.woff2') format("woff2");
+	}
+}
+
+/* GLOBAL STYLES */
+
+* {
+	@apply font-outfit antialiased;
+}
+
+h1 {
+	@apply text-xl font-bold;
+}
+
+a {
+	@apply underline underline-offset-4 decoration-1 hover:opacity-85;
+}
